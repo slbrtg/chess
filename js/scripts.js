@@ -16,3 +16,9 @@ function Game (){
   this.row8 = [];
   this.row8.length = 8
 }
+
+function chessPiece (){
+  this.piece = piece;
+  this.movement = movement;
+  this.teamColor = teamColor;
+}

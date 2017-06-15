@@ -27,9 +27,14 @@
   text-align: center;
 }
 
+body, .jumbotron {
+  color: green;
+  background-color: black;
+}
+
 #game-board {
   margin-top: 50px;
-  margin-left: 250px;
+  margin-left: 300px;
 }
 
 .col-sm-1 {
