@@ -65,11 +65,24 @@ function King(){
   }
 }
 
-$(document).ready(function(){
-  for (var x = 0.5; x < 64; x = x + 0.5){
-    var jumpSquare = 1.5;
-    if (x % jumpSquare === 0){
+function colorBoard(){
+  let counter = 0;
+  let remainder = 1;
+  for (let x = 0; x < 64; x++){
+    if (x % 2  === remainder){
       $('#square'+x).css('background-color', 'green');
     }
+    if (counter >= 7 ){ remainder = 0 };
+    if (counter >= 15){ remainder = 1 };
+    if (counter >= 23){ remainder = 0 };
+    if (counter >= 31){ remainder = 1 };
+    if (counter >= 39){ remainder = 0 };
+    if (counter >= 47){ remainder = 1 };
+    if (counter >= 55){ remainder = 0 };
+    counter++;
   }
+}
+
+$(document).ready(function(){
+  colorBoard();
 });
